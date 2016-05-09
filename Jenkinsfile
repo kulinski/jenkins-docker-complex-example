@@ -21,7 +21,7 @@ node {
         // otherwise would set localRepository=${pwd}/m2repo)
         mavenDocker.inside('-v /m2repo:/m2repo') {
             // Check out the source code.
-            git 'https://github.com/tfennelly/spring-petclinic.git'
+            git 'https://github.com/spring-projects/spring-petclinic.git'
     
             // Set up a shared Maven repo so we don't need to download all dependencies on every build.
             writeFile file: 'settings.xml',
